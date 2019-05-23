@@ -1,0 +1,7 @@
+<form #contactForm="ngForm">
+    <h1>Buscador</h1>
+    <input name="buscador" type="text" [(ngModel)]="query" [attr.placeholder]="placeHold"><button (click)="search()">boton</button>
+    <br/>
+    {{query}}
+</form>
+<app-list-owners-component></app-list-owners-component>

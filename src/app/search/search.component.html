@@ -1,0 +1,6 @@
+<form>
+  <h1>Buscador</h1>
+  <input name="buscador" type="text" [(ngModel)]="query" [attr.placeholder]="placeHold"><button (click)="search()" [innerHTML]="butonLabel"></button>
+  <p>Parametro de búsqueda: {{query}}</p>
+  <p>Resultado: {{result}}</p>
+</form>

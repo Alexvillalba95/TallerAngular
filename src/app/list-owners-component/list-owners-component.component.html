@@ -1,0 +1,16 @@
+<button *ngIf="!result" (click)="obtenerOwners()">Owners</button><br/>
+<a routerLink="/owners-add" routerLinkActive="active">
+  Add Owner
+</a>
+<br/>
+<ul style="width: 20%; display: inline-table;" >
+  <li *ngFor="let owner of results; let i = index;" >
+    <div class="shadowbox">
+      <a routerLink="/owner/{{owner?.id}}" routerLinkActive="active" (click)="onSelect(owner)">
+      {{owner?.firstName}} {{owner?.lastName}} - {{owner?.city}} <img width="50" height="50" src={{urlImagen}}>
+      </a>
+      <br/>
+      <br>
+    </div>
+  </li>
+</ul> 
